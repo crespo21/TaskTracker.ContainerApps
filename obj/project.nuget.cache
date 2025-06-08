@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "5o7bXvWjNJE=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\a239253\\source\\repos\\sbg-dev\\training\\asksTracker.ContainerApps\\TasksTracker.TasksManager.Backend.Api\\TasksTracker.TasksManager.Backend.Api.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\a239253\\.nuget\\packages\\microsoft.aspnetcore.openapi\\9.0.3\\microsoft.aspnetcore.openapi.9.0.3.nupkg.sha512",
+    "C:\\Users\\a239253\\.nuget\\packages\\microsoft.openapi\\1.6.17\\microsoft.openapi.1.6.17.nupkg.sha512"
+  ],
+  "logs": []
+}

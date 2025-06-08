@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "6vmiBCcVagIVqI3LTacBp1/8GvMBOg0XYlWRFemHvnA=",
+  "Source": "TasksTracker.TasksManager.Backend.Api",
+  "BasePath": "_content/TasksTracker.TasksManager.Backend.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
