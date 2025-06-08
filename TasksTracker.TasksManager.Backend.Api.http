@@ -1,6 +1,113 @@
-@TasksTracker.TasksManager.Backend.Api_HostAddress = http://localhost:5186
+@TasksHostAddress = http://localhost:5186
 
-# GET {{TasksTracker.TasksManager.Backend.Api_HostAddress}}/weatherforecast/
+### Variables for testing
+@userId = john.doe
+@taskId = 550e8400-e29b-41d4-a716-446655440000
+
+### 1. GET /api/tasks?createdBy={user} - Get tasks by creator
+GET {{TasksHostAddress}}/api/tasks?createdBy={{userId}}
 Accept: application/json
+
+###
+
+### 2. GET /api/tasks/{id} - Get specific task by ID
+GET {{TasksHostAddress}}/api/tasks/{{taskId}}
+Accept: application/json
+
+###
+
+### 3. POST /api/tasks - Create new task
+POST {{TasksHostAddress}}/api/tasks
+Content-Type: application/json
+
+{
+    "taskName": "Complete API Documentation",
+    "taskCreatedBy": "john.doe",
+    "taskAssignedTo": "jane.smith",
+    "taskDueDate": "2025-06-15T10:00:00Z"
+}
+
+###
+
+### 4. POST /api/tasks - Create another task for testing
+POST {{TasksHostAddress}}/api/tasks
+Content-Type: application/json
+
+{
+    "taskName": "Review Code Implementation",
+    "taskCreatedBy": "alice.johnson",
+    "taskAssignedTo": "bob.wilson",
+    "taskDueDate": "2025-06-20T15:30:00Z"
+}
+
+###
+
+### 5. PUT /api/tasks/{id} - Update task (use task ID from previous responses)
+PUT {{TasksHostAddress}}/api/tasks/{{taskId}}
+Content-Type: application/json
+
+{
+    "taskId": "{{taskId}}",
+    "taskName": "Complete API Documentation - Updated",
+    "taskAssignedTo": "updated.assignee",
+    "taskDueDate": "2025-06-18T12:00:00Z"
+}
+
+###
+
+### 6. PUT /api/tasks/{id}/markcomplete - Mark task as complete
+PUT {{TasksHostAddress}}/api/tasks/{{taskId}}/markcomplete
+Content-Type: application/json
+
+###
+
+### 7. DELETE /api/tasks/{id} - Delete task
+DELETE {{TasksHostAddress}}/api/tasks/{{taskId}}
+
+###
+
+### Test Scenarios
+
+### Scenario 1: Complete workflow test
+# Step 1: Create a new task
+POST {{TasksHostAddress}}/api/tasks
+Content-Type: application/json
+
+{
+    "taskName": "Integration Test Task",
+    "taskCreatedBy": "test.user",
+    "taskAssignedTo": "test.assignee",
+    "taskDueDate": "2025-06-25T09:00:00Z"
+}
+
+###
+
+# Step 2: Get all tasks by creator
+GET {{TasksHostAddress}}/api/tasks?createdBy=test.user
+Accept: application/json
+
+###
+
+### Error Testing
+
+### Test with invalid task ID
+GET {{TasksHostAddress}}/api/tasks/invalid-guid-format
+Accept: application/json
+
+###
+
+### Test with non-existent task ID
+GET {{TasksHostAddress}}/api/tasks/99999999-9999-9999-9999-999999999999
+Accept: application/json
+
+###
+
+### Test POST with missing required fields
+POST {{TasksHostAddress}}/api/tasks
+Content-Type: application/json
+
+{
+    "taskName": ""
+}
 
 ###
