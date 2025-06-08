@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\TasksTracker.TasksManager.Backend.Api.props" />
+</Project>
