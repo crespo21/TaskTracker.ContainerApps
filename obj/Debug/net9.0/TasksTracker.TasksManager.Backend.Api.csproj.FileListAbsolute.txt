@@ -31,3 +31,4 @@ C:\Users\a239253\source\repos\sbg-dev\training\asksTracker.ContainerApps\TasksTr
 C:\Users\a239253\source\repos\sbg-dev\training\asksTracker.ContainerApps\TasksTracker.TasksManager.Backend.Api\obj\Debug\net9.0\TasksTracker.TasksManager.Backend.Api.pdb
 C:\Users\a239253\source\repos\sbg-dev\training\asksTracker.ContainerApps\TasksTracker.TasksManager.Backend.Api\obj\Debug\net9.0\TasksTracker.TasksManager.Backend.Api.genruntimeconfig.cache
 C:\Users\a239253\source\repos\sbg-dev\training\asksTracker.ContainerApps\TasksTracker.TasksManager.Backend.Api\obj\Debug\net9.0\ref\TasksTracker.TasksManager.Backend.Api.dll
+C:\Users\a239253\source\repos\sbg-dev\training\asksTracker.ContainerApps\TasksTracker.TasksManager.Backend.Api\obj\Debug\net9.0\TasksTracker.TasksManager.Backend.Api.sourcelink.json
